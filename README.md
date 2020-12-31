@@ -1,5 +1,6 @@
 # node-mail-service
 基于node的邮件服务
+就是照着大佬学习的
 
 ## 启动服务
 1. 找一个你喜欢的文件夹执行 `yarn init` 创建一个package.json

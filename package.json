@@ -1,9 +1,14 @@
 {
-  "name": "node-email",
+  "name": "node-mail-service",
   "version": "1.0.0",
-  "description": "每天定时自动发邮件",
+  "description": "基于node的邮件服务",
   "main": "index.js",
-  "author": "weilan",
+  "author": "weilan<https://github.com/hql7>",
+  "bugs": {
+    "url": "https://github.com/hql7/node-mail-service/issues"
+  },
+  "homepage": "https://github.com/hql7/node-mail-service/#readme",
+  "keyword": "MailService node crontab",
   "license": "MIT",
   "private": false,
   "scripts": {
