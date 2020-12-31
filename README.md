@@ -3,9 +3,9 @@
 
 ## 启动服务
 1. 找一个你喜欢的文件夹执行 `yarn init` 创建一个package.json
-2. yarn add nodemailer axios 下载要用到的两个依赖
+2. yarn add nodemailer axios node-schedule 下载要用到的三个依赖：获取情话、邮件服务、定时任务
 3. 去你的邮箱开启邮件服务并获取授权码
-4. node index 启动服务；依次显示你的情话、即将发出、发送成功|发送失败
+4. node index 或 yarn serve 启动服务；依次显示爱心启动、你的情话、即将发出、发送成功|发送失败
 
 ## 配置邮箱服务
 
@@ -44,3 +44,21 @@ function sendMail(text, title = "亲爱的小宝贝") {
   其他邮箱步骤大致相同。
 
 ② [常用邮箱服务器地址及端口](https://wenku.baidu.com/view/c42dc4e8f4335a8102d276a20029bd64783e62c1.html)
+
+## 常见问题
+
+1. 163有限不能定制邮件的from和to
+```js
+  transporter.sendMail({
+    from: user, // 163如果from和auth中的user不一致会发送失败，而qq邮箱可以加定制话语`你的爱人${user}`
+    to: to,
+    subject: title,
+    text: text,
+  })
+```
+
+## 上传到服务器
+1. 选一个你喜欢的服务器
+2. 选一个你喜欢的xshell或其他什么玩意
+3. 选一个你喜欢的pm2下载姿势
+4. 选一个你喜欢的pm2运行node index

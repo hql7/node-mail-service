@@ -6,8 +6,12 @@
   "author": "weilan",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "serve": "node index"
+  },
   "dependencies": {
     "axios": "^0.21.1",
+    "node-schedule": "^1.3.2",
     "nodemailer": "^6.4.17",
     "wl-http": "^1.1.3"
   }

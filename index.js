@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+const schedule = require("node-schedule");
 const { default: Axios } = require("axios");
 
 // 邮件配置及发送
@@ -42,4 +43,13 @@ function loveToSend() {
   })
 }
 
-loveToSend()
+// 定时发射爱心
+function crontabSendLove() {
+  schedule.scheduleJob({ hour: 10, minute: 23 }, function () {
+    console.log("爱心启动");
+    loveToSend()
+  });
+}
+
+// 爱心启动
+crontabSendLove()
