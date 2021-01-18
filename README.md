@@ -3,10 +3,16 @@
 就是照着大佬学习的
 
 ## 启动服务
+1. git clone 本项目
+2. yarn install 或 npm install
+3. yarn serve 或 npm run serve
+
+## 创建你的邮件服务
 1. 找一个你喜欢的文件夹执行 `yarn init` 创建一个package.json
 2. yarn add nodemailer axios node-schedule 下载要用到的三个依赖：获取情话、邮件服务、定时任务
 3. 去你的邮箱开启邮件服务并获取授权码
-4. node index 或 yarn serve 启动服务；依次显示爱心启动、你的情话、即将发出、发送成功|发送失败
+4. 创建index并依据本项目实现邮件服务
+5. node index 或 yarn serve 启动服务；终端依次显示爱心启动、你的情话、即将发出、发送成功|发送失败
 
 ## 配置邮箱服务
 
